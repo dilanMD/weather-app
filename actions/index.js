@@ -23,7 +23,7 @@ export const fetchingDataFailure = error => ({
 export const fetchData = (cityId = "1264527") => {
   return async dispatch => {
     try {
-      const response = await fetch(`${BASE_URL} + cityId + "&appid=" + ${API_KEY}`);
+      const response = await fetch(`${BASE_URL}`);
       dispatch(fetchingDataRequest());
       const weatherData = await response.json();
       console.log('Weather Data-----------', weatherData);

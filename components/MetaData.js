@@ -12,9 +12,9 @@ import { fetchData } from '../actions';
 
 class MetaData extends Component {
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchData()
-
+    // console.log(this.props)
   }
 
   render() {
@@ -24,7 +24,7 @@ class MetaData extends Component {
       <View style={styles.metaData}>
         <Text style={styles.currentDay}>{"Saturday" + ", " + "19" + "th " + "October"}</Text>
         <Text style={styles.currentTime}>{"09:35" + " " + "am"}</Text>
-        <Text style={styles.city}>{this.props.apiData.name}</Text>
+        <Text style={styles.city}>{this.props.apiData.EnglishName}</Text>
         <Text style={styles.weatherType}>{"sunny"}</Text>
       </View>
     );
